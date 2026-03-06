@@ -27,7 +27,7 @@ export default [
     },
     rules: {
       // Formatting
-      "indent": ["warn", 2],
+      "indent": ["warn", 4],
       "quotes": ["warn", "single"],
       "semi": ["warn", "always"],
       "comma-dangle": ["warn", "never"],
