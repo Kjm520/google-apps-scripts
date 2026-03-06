@@ -1,0 +1,1 @@
+General backup repo for Google Apps Script projects; bound and unbound scripts.
