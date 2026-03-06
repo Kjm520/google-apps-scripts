@@ -1,0 +1,5 @@
+.config
+*config.*s
+*.json
+.clasp.json
+!appsscript.json
