@@ -1,5 +1,5 @@
 .config
-*config.*s
+_config.*s
 *.json
 .clasp.json
 !appsscript.json

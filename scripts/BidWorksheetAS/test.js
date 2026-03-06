@@ -14,7 +14,6 @@
 //     sheet.insertRows(rowcount,(rows-rowcount));
 //   }
 
-
 //   // Logger.log(colcount+","+cols)
 //   // if (colcount > cols) {
 //   //   sheet.deleteColumns(cols+1, (colcount-cols));

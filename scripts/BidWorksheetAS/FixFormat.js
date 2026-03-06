@@ -1,21 +1,21 @@
 function fixFormat() {
 
-  sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Bids");
+  sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Bids');
 
   rows = sheet.getMaxRows();
   cols = sheet.getMaxColumns();
 
   fullsheet = sheet.getRange(1,1,rows,cols);
 
-  fullsheet.setFontFamily("Arial")
-  .setFontSize(9)
-  .setHorizontalAlignment("center")
-  .setVerticalAlignment("middle");
+  fullsheet.setFontFamily('Arial')
+    .setFontSize(9)
+    .setHorizontalAlignment('center')
+    .setVerticalAlignment('middle');
 
-  sheet.getRange(1,1,1,sheet.getMaxColumns()).setFontWeight("bold");
+  sheet.getRange(1,1,1,sheet.getMaxColumns()).setFontWeight('bold');
 
-  sheet.getRange(2,8,sheet.getMaxRows()-2).setNumberFormat("\"$\"#,##0");
-  sheet.getRange(2,15,sheet.getMaxRows()-2).setNumberFormat("\"$\"#,##0");
+  sheet.getRange(2,8,sheet.getMaxRows() - 2).setNumberFormat('"$"#,##0');
+  sheet.getRange(2,15,sheet.getMaxRows() - 2).setNumberFormat('"$"#,##0');
 
   // sheet.getRange(2,2,rows-1,cols-2).setBackground("white").setBorder(null, null, null, null, false, false);
   // sheet.getRange(2,9,rows-1,cols-9).setBackground("white").setBorder(null, null, null, null, false, false);
@@ -34,6 +34,5 @@ function fixFormat() {
   // sheet.setColumnWidth(12, 15);
 
 }
-
 
 // //setBorder(top, left, bottom, right, vertical, horizontal)

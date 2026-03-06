@@ -1,5 +1,5 @@
 function condformats() {
-  var ratessheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Rates");
+  var ratessheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Rates');
 
   // Rule 1: Highlight duplicates in column A
   const rule1 = SpreadsheetApp.newConditionalFormatRule()
@@ -54,7 +54,6 @@ function backupBotSheet() {
   return url;
 }
 
-
 function logRateCount() {
   const ss = SpreadsheetApp.getActive();
   const stats = ss.getSheetByName('Stats');
@@ -65,31 +64,28 @@ function logRateCount() {
   const laneCount = stats.getRange('T5').getValue();
   const bidCount = stats.getRange('K4').getValue();
   const coverageCount = stats.getRange('T6').getValue();
-  const uniqueOrigins = stats.getRange('T10').getValue(); 
+  const uniqueOrigins = stats.getRange('T10').getValue();
   const uniqueDestinations = stats.getRange('T11').getValue();
   const uniqueModes = stats.getRange('T12').getValue();
   const cMaxLanes = stats.getRange('T13').getValue();
   const cCoverage = stats.getRange('T14').getValue();
-  const combinedUniques = uniqueDestinations+uniqueModes+uniqueOrigins;
+  const combinedUniques = uniqueDestinations + uniqueModes + uniqueOrigins;
 
   const logName = 'CountLog';
   const log = ss.getSheetByName(logName);
-  const date = new Date()
+  const date = new Date();
 
   const row = [date, rateCount, unratedCount, excludedCount, laneCount, bidCount, coverageCount, uniqueModes, uniqueOrigins, uniqueDestinations, combinedUniques, cMaxLanes, cCoverage];
   //log.appendRow(row);
-  const newRowLocation = log.getRange(2,1,1,row.length)
-  
+  const newRowLocation = log.getRange(2,1,1,row.length);
+
   newRowLocation.insertCells(SpreadsheetApp.Dimension.ROWS);
-  newRowLocation.setValues([row])
-  
+  newRowLocation.setValues([row]);
 
   const lastRow = log.getLastRow();
   log.getRange(lastRow, 1).setNumberFormat('yyyy-mm-dd');
 }
 
-
-
 function timed() {
-condformats()
+  condformats();
 }

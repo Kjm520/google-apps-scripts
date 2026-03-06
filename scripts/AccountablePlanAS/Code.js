@@ -4,8 +4,8 @@ function onEdit(e) {
 
   // Map sheet -> ID prefix
   const prefixMap = {
-    "Expense Log": "EX",
-    "Reimbursement Log": "RI",
+    'Expense Log': 'EX',
+    'Reimbursement Log': 'RI'
   };
 
   const code = prefixMap[sheetName];
@@ -24,7 +24,7 @@ function onEdit(e) {
   if (idCell.getValue()) return; // never overwrite existing IDs
 
   const tz = sh.getParent().getSpreadsheetTimeZone();
-  const yyyymmdd = Utilities.formatDate(dateVal, tz, "yyyyMMdd");
+  const yyyymmdd = Utilities.formatDate(dateVal, tz, 'yyyyMMdd');
   const prefix = `${code}-${yyyymmdd}-`;
 
   // Scan existing IDs in col B, find max seq for this date/prefix
@@ -33,7 +33,7 @@ function onEdit(e) {
   let maxSeq = 0;
 
   for (const [v] of idValues) {
-    if (typeof v !== "string") continue;
+    if (typeof v !== 'string') continue;
     if (!v.startsWith(prefix)) continue;
 
     const m = v.match(/-(\d{3,})$/);
@@ -43,6 +43,6 @@ function onEdit(e) {
     if (n > maxSeq) maxSeq = n;
   }
 
-  const nextSeq = String(maxSeq + 1).padStart(3, "0");
+  const nextSeq = String(maxSeq + 1).padStart(3, '0');
   idCell.setValue(prefix + nextSeq);
 }

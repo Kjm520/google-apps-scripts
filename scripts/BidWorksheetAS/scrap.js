@@ -1,21 +1,17 @@
-  // for (i=sheet.getLastRow();i>0;i--) {
-    
-  //   Logger.log(i);
-  //   range = sheet.getRange(sheet.getLastRow(),2,1,6);
-    
-  //   range.setBorder(true, null, false, null, null, null, "black", SpreadsheetApp.BorderStyle.DOTTED);
-    
-  //   var isblank = (range.getValues().toString() == ",,,,,")
+// for (i=sheet.getLastRow();i>0;i--) {
 
-  //   if (isblank) {
-  //     range.deleteCells(SpreadsheetApp.Dimension.ROWS);
-  //     ;
-  //   }
-  // }
+//   Logger.log(i);
+//   range = sheet.getRange(sheet.getLastRow(),2,1,6);
 
+//   range.setBorder(true, null, false, null, null, null, "black", SpreadsheetApp.BorderStyle.DOTTED);
 
+//   var isblank = (range.getValues().toString() == ",,,,,")
 
-
+//   if (isblank) {
+//     range.deleteCells(SpreadsheetApp.Dimension.ROWS);
+//     ;
+//   }
+// }
 
 //   function moveUpOLD() {
 //   var s = new Date();

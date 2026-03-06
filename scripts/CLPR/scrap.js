@@ -1,5 +1,4 @@
 
-
 // function combinewords() {
 //   ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Cart");
 //   firstwords = ss.getRange("A2:A").getValues().flat();
@@ -22,7 +21,6 @@
 //     }
 //   }
 // }
-
 
 // for (i=0;i<lastrow;i++) {
 //   if (firstwords[i].length > 0) {

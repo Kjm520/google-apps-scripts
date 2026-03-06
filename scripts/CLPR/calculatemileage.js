@@ -11,6 +11,6 @@ function calculateMileage(origin, destination) {
     return distance;
   }
   else {
-    return "error"
+    return 'error';
   }
 }

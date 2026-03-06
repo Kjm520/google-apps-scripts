@@ -1,16 +1,16 @@
 function log() {
   var declinedchange = 0.98;
 
-  s = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Bids");
-  ls = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Bid_Log");
+  s = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Bids');
+  ls = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Bid_Log');
 
   for (i = 0; i < 100; ) {
     var bidline = s.getRange(2 + i, 12, 1, 5);
     var bid = bidline.getValues();
     var result = bid[0][4].toUpperCase();
-    noblank = !bid.flat().includes("");
+    noblank = !bid.flat().includes('');
 
-    if (noblank && result == "DECLINED") {
+    if (noblank && result == 'DECLINED') {
       newline = bid.flat();
       newline.unshift(new Date());
       newline.pop();
@@ -24,12 +24,12 @@ function log() {
       continue;
     }
 
-    if (noblank && result == "ACCEPTED") {
+    if (noblank && result == 'ACCEPTED') {
       bidline.deleteCells(SpreadsheetApp.Dimension.ROWS);
       continue;
     }
 
-    if (bid.flat().every((e) => e === "")) {
+    if (bid.flat().every((e) => e === '')) {
       i++;
       continue;
     } else i++;
