@@ -11,7 +11,10 @@ function onOpen() {
         .addToUi();
 }
 
+// structure
+/**
 function menuItem2() {
     SpreadsheetApp.getUi() // Or DocumentApp, SlidesApp or FormApp.
         .alert('You clicked the second menu item!');
 }
+ */
