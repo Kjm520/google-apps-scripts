@@ -1,6 +1,9 @@
-/*
-Email Bid Analysis
-*/
+/**
+ * === Email Bid Anaylsis ===
+ * This worked great and was replaced by the bot. It used a 1 min trigger and ran successfully for maybe 3 years?
+ * Processing millions of emails.
+ * But its time has come.
+ */
 
 // set global cariables and create regex constructors
 var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Email_Log');
