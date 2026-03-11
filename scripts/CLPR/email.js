@@ -4,7 +4,7 @@ function sendEmail(to, subject, body) {
 
     // seriously if somehow you are reading this and are in any way associated with ANY operation that spams emails, GTFO.
 
-
+    // That means you Sandra
 
     // trigger, every 5 min, 
     GmailApp.sendEmail(
