@@ -2,7 +2,7 @@
  * THANKFULLY, Google Workspace provides the admin ability of blocking emails at the domain level.
  * Why is this not in regular Gmail, I do not know.
  * So here we collect the spammers, print them to a CSV, add them to the domain block list.
- * Blocked spammers get an undeliverable error.
+ * Blocked spammers get an undeliverable error. Testing note comprehension by adding this sentence.
  * They also get a custom message inside to notify them that they should reconsider their life choices.
  */
 
