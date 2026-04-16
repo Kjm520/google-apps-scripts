@@ -21,6 +21,7 @@ function onEdit(e) {
             }
 
             sheet.getRange(row,8).setValue(time);
+            sheet.getRange(row,2).setBackground('#d9ead3');
         }
     }
 }

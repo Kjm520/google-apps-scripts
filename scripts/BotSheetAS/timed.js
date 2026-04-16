@@ -89,3 +89,40 @@ function logRateCount() {
 function timed() {
     condformats();
 }
+
+
+
+
+function clearWarningColors() {
+    var ratesrange = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Rates').getRange('B2:B');
+    ratesrange.setBackground(null)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
